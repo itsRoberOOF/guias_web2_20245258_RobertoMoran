@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title>Hytale</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Nunito Sans", sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-gray-900 overflow-x-hidden">
+        <header class="fixed z-50 w-full top-8 lg:top-16 left-0 right-0">
+            <div
+                class="flex justify-between items-center px-6 lg:justify-center"
+            >
+                <img
+                    src="img/h_logo.webp"
+                    alt="Logo Hytale"
+                    class="h-16 lg:hidden drop-shadow-md"
+                />
+
+                <button
+                    id="btn-menu-cel"
+                    class="lg:hidden bg-blue-950 border-2 border-sky-300 rounded-sm p-2 text-sky-300 hover:text-white hover:bg-blue-900 transition-colors shadow-lg"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-8 w-8"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"
+                        />
+                    </svg>
+                </button>
+
+                <div
+                    class="hidden lg:flex items-center justify-center space-x-20"
+                >
+                    <img
+                        src="img/h_logo.webp"
+                        alt="Logo Hytale"
+                        class="h-24 drop-shadow-md"
+                    />
+
+                    <nav
+                        class="bg-blue-950 border-2 border-sky-300 rounded-sm px-8 py-2 shadow-2xl"
+                    >
+                        <ul
+                            class="flex flex-row items-center text-sky-300 font-bold justify-center space-x-0 lg:space-x-12 xl:space-x-24 lg:px-8 xl:px-20"
+                        >
+                            <li>
+                                <a
+                                    href="#"
+                                    class="hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)] transition-all"
+                                    >INICIO</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)] transition-all"
+                                    >ACERCA</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)] transition-all"
+                                    >HISTORIA</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)] transition-all"
+                                    >PERSPECTIVA</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="#"
+                                    class="hover:text-white hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)] transition-all"
+                                    >GAMEPLAY</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div
+                id="menu-cel"
+                class="hidden lg:hidden absolute top-full right-6 mt-2 w-48 bg-blue-950 border-2 border-sky-300 rounded-sm shadow-xl origin-top-right"
+            >
+                <ul
+                    class="flex flex-col items-center text-sky-300 font-bold py-2 space-y-2"
+                >
+                    <li>
+                        <a
+                            href="#"
+                            class="block px-4 py-2 hover:text-white hover:bg-blue-900 w-full text-center"
+                            >INICIO</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="block px-4 py-2 hover:text-white hover:bg-blue-900 w-full text-center"
+                            >ACERCA</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="block px-4 py-2 hover:text-white hover:bg-blue-900 w-full text-center"
+                            >HISTORIA</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="block px-4 py-2 hover:text-white hover:bg-blue-900 w-full text-center"
+                            >PERSPECTIVA</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="#"
+                            class="block px-4 py-2 hover:text-white hover:bg-blue-900 w-full text-center"
+                            >GAMEPLAY</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section
+            id="hero"
+            class="relative w-full h-screen bg-[url(img/hero.jpeg)] bg-cover bg-center bg-no-repeat overflow-hidden"
+        >
+            <div class="absolute inset-0 bg-black/50 z-0"></div>
+            <img
+                src="img/hytale_logo.png"
+                alt="Hytale Logo"
+                class="absolute z-10 w-3/4 md:w-1/2 lg:w-auto lg:h-1/3 bottom-10 left-1/2 -translate-x-1/2 lg:left-20 lg:bottom-16 lg:translate-x-0"
+            />
+        </section>
+
+        <section
+            id="about"
+            class="w-full min-h-screen bg-gray-900 text-white flex items-center justify-center py-20 px-6 lg:px-32 relative overflow-hidden"
+        >
+            <div
+                class="max-w-7xl w-full mx-auto flex flex-col lg:flex-row-reverse items-center justify-center gap-12 lg:gap-24"
+            >
+                <div
+                    class="w-full lg:w-1/2 flex flex-col items-center justify-center space-y-12"
+                >
+                    <h2
+                        class="text-5xl md:text-6xl font-extrabold text-sky-300 tracking-widest uppercase drop-shadow-[0_0_10px_rgba(125,211,252,0.5)]"
+                    >
+                        ¿QUÉ ES?
+                    </h2>
+                    <img
+                        src="img/hytale_logo.png"
+                        alt="Hytale Logo"
+                        class="w-80 md:w-124 object-contain drop-shadow-xl hover:scale-105 transition-transform duration-300"
+                    />
+                </div>
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <p
+                        class="text-lg md:text-xl text-gray-300 leading-relaxed font-light"
+                    >
+                        Hytale es un
+                        <span class="text-white font-bold">
+                            videojuego de aventura, RPG y sandbox
+                        </span>
+                        >que te permite hacer prácticamente lo que desees dentro
+                        de un enorme mundo abierto. Puedes explorar, combatir
+                        solo o con amigos, descubrir mazmorras y enfrentarte a
+                        cientos de criaturas y animales repartidos por el mundo.
+                        El juego fue desarrollado por
+                        <span class="text-white font-bold">Hypixel Studios</span
+                        >, creadores de Hypixel, el servidor más grande de
+                        Minecraft, lo que explica sus similitudes: Hytale se
+                        siente como
+                        <span class="text-white font-bold italic">
+                            "un Minecraft hecho por fans, para fans" </span
+                        >.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="history"
+            class="w-full py-24 bg-gray-800 text-white flex flex-col items-center px-6"
+        >
+            <div class="max-w-4xl w-full text-center space-y-12">
+                <h2
+                    class="text-5xl md:text-6xl font-extrabold text-sky-300 tracking-widest uppercase drop-shadow-[0_0_10px_rgba(125,211,252,0.5)]"
+                >
+                    HISTORIA
+                </h2>
+                <div class="flex flex-col space-y-4">
+                    <p
+                        class="text-lg md:text-xl text-gray-300 leading-relaxed font-light text-justify"
+                    >
+                        La historia de Hytale
+                        <span class="text-white font-bold"
+                            >comienza en 2018</span
+                        >, cuando fue anunciado al público con un tráiler que
+                        fascinó a todos. Este tráiler generó tanta atención que
+                        el equipo de Hypixel empezó a trabajar aún más en el
+                        juego para que cumpliera con lo que la comunidad
+                        esperaba. En ese momento mencionaron que en algún punto
+                        habría una beta abierta para que todos pudieran
+                        probarlo, e incluso se abrió un formulario de registro
+                        para la misma.
+                    </p>
+                    <p
+                        class="text-lg md:text-xl text-gray-300 leading-relaxed font-light text-justify"
+                    >
+                        Tiempo después, la atención que rodeaba al juego atrajo
+                        a <span class="text-white font-bold">Riot Games</span>,
+                        la cual financió el proyecto y compró Hypixel Studios.
+                        En manos de Riot Games, el juego se volvió demasiado
+                        ambicioso, ya que se planeó su lanzamiento no solo en
+                        PC, sino también en consolas y dispositivos móviles,
+                        cuando originalmente estaba pensado solo para PC. Para
+                        lograr esto, el equipo tuvo que reiniciar el desarrollo
+                        desde cero utilizando un nuevo lenguaje y un nuevo
+                        motor.
+                    </p>
+                    <p
+                        class="text-lg md:text-xl text-gray-300 leading-relaxed font-light text-justify"
+                    >
+                        Esta decisión no salió nada bien. Pasaron los años y
+                        cada vez se anunciaba menos progreso del juego, hasta
+                        que finalmente Riot anunció su
+                        <span class="text-red-400 font-bold">cancelación</span>.
+                        Fue entonces cuando Simon, ex-presidente de Hypixel,
+                        inició negociaciones con Riot para recuperar Hytale y
+                        lanzar una versión “legacy”, basada en el desarrollo
+                        original de Hypixel. Estas negociaciones resultaron
+                        exitosas y, gracias a ello, Hytale por fin pudo salir a
+                        la luz el
+                        <span class="text-white font-bold"
+                            >13 de enero de 2026</span
+                        >.
+                    </p>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-24 pt-8 opacity-90"
+                >
+                    <div class="flex flex-col items-center space-y-4 group">
+                        <img
+                            src="img/hypixel_logo.png"
+                            alt="Hypixel Studios"
+                            class="h-20 md:h-24 object-contain"
+                        />
+                        <span
+                            class="text-sm text-sky-300 uppercase font-bold tracking-widest"
+                        >
+                            Versión Legacy (Salida al Mercado)
+                        </span>
+                    </div>
+
+                    <div
+                        class="hidden md:block w-px h-24 bg-gray-600 opacity-50"
+                    ></div>
+                    <div
+                        class="md:hidden w-24 h-px bg-gray-600 opacity-50"
+                    ></div>
+
+                    <div class="flex flex-col items-center space-y-4 group">
+                        <img
+                            src="img/riot_logo.png"
+                            alt="Riot Games"
+                            class="h-20 md:h-24 object-contain"
+                        />
+                        <span
+                            class="text-sm text-red-400 uppercase font-bold tracking-widest"
+                        >
+                            Versión Descartada
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="perspective"
+            class="w-full min-h-screen bg-gray-900 text-white flex items-center justify-center py-24 px-6 lg:px-32 relative overflow-hidden"
+        >
+            <div
+                class="max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24"
+            >
+                <div
+                    class="w-full lg:w-1/2 flex flex-col items-center justify-center group"
+                >
+                    <div class="relative w-full max-w-lg">
+                        <img
+                            src="img/avatar.jpeg"
+                            alt="Mi Avatar en Hytale"
+                            class="w-full rounded-xl shadow-2xl border-2 border-gray-800 transform group-hover:scale-[1.02] transition-transform duration-500"
+                        />
+                        <div
+                            class="absolute -bottom-4 -right-4 w-24 h-24 border-r-4 border-b-4 border-sky-300 opacity-50"
+                        ></div>
+                    </div>
+
+                    <p
+                        class="mt-6 text-sky-300 italic text-sm md:text-base flex items-center gap-2"
+                    >
+                        - Mi avatar el primer día que probé Hytale
+                    </p>
+                </div>
+
+                <div class="w-full lg:w-1/2 text-center lg:text-left space-y-8">
+                    <h2
+                        class="text-5xl md:text-6xl font-extrabold text-sky-300 tracking-widest uppercase drop-shadow-[0_0_10px_rgba(125,211,252,0.5)]"
+                    >
+                        PERSPECTIVA
+                    </h2>
+
+                    <div class="flex flex-col space-y-4">
+                        <p
+                            class="text-lg md:text-xl text-gray-300 leading-relaxed font-light text-justify"
+                        >
+                            Hytale, para mí, ha sido una de las noticias que más
+                            ha alegrado mi 2026. Personalmente, he jugado
+                            Minecraft desde que tengo memoria y es uno de mis
+                            juegos favoritos. Muchos de mis mejores momentos en
+                            ese juego los viví en el servidor de Hypixel,
+                            jugando con amigos.
+                        </p>
+                        <p
+                            class="text-lg md:text-xl text-gray-300 leading-relaxed font-light text-justify"
+                        >
+                            Aún recuerdo el día en que salió el tráiler de
+                            Hytale en 2018 y lo emocionado que me sentí al ver
+                            un juego creado por las mismas personas que me
+                            habían dado tantas horas de diversión en Minecraft.
+                            Desde ese momento seguí de cerca el progreso del
+                            juego: fui de los que se registraron para la beta
+                            (aunque nunca llegó a salir) y revisaba los dev-logs
+                            de vez en cuando.
+                        </p>
+                        <p
+                            class="text-lg md:text-xl text-gray-300 leading-relaxed font-light text-justify"
+                        >
+                            También me emocioné cuando Riot Games compró el
+                            estudio y sentí que todo se perdía cuando el juego
+                            fue cancelado. Pero finalmente, después de tantos
+                            años de espera, pude probar Hytale y me alegra decir
+                            que la espera
+                            <span class="text-white font-bold"
+                                >valió la pena.</span
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            id="gameplay"
+            class="w-full py-24 bg-gray-800 text-white flex flex-col items-center px-6 border-t border-gray-800"
+        >
+            <div class="max-w-7xl w-full space-y-16">
+                <h2
+                    class="text-5xl md:text-6xl font-extrabold text-sky-300 tracking-widest uppercase drop-shadow-[0_0_10px_rgba(125,211,252,0.5)] text-center"
+                >
+                    GAMEPLAY
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+                    <div class="flex flex-col space-y-4 group">
+                        <div
+                            class="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-transparent group-hover:border-sky-300 transition-colors duration-300"
+                        >
+                            <iframe
+                                class="w-full h-full"
+                                src="https://www.youtube.com/embed/o77MzDQT1cg"
+                                title="Hytale Announcement Trailer"
+                                frameborder="0"
+                                allow="
+                                    accelerometer;
+                                    autoplay;
+                                    clipboard-write;
+                                    encrypted-media;
+                                    gyroscope;
+                                    picture-in-picture;
+                                "
+                                allowfullscreen
+                            >
+                            </iframe>
+                        </div>
+                        <div class="flex items-center justify-center px-2">
+                            <span class="text-xl font-bold text-gray-200"
+                                >Trailer de Anuncio - 2018</span
+                            >
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col space-y-4 group">
+                        <div
+                            class="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl border-2 border-transparent group-hover:border-sky-300 transition-colors duration-300"
+                        >
+                            <iframe
+                                class="w-full h-full"
+                                src="https://www.youtube.com/embed/JhP64F7MaCM"
+                                title="Hytale Gameplay Showcase"
+                                frameborder="0"
+                                allow="
+                                    accelerometer;
+                                    autoplay;
+                                    clipboard-write;
+                                    encrypted-media;
+                                    gyroscope;
+                                    picture-in-picture;
+                                "
+                                allowfullscreen
+                            >
+                            </iframe>
+                        </div>
+                        <div class="flex items-center justify-center px-2">
+                            <span class="text-xl font-bold text-gray-200"
+                                >Gameplay Showcase - 2025</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="w-full bg-blue-950 border-t-2 border-sky-300 py-6 mt-0">
+            <div class="text-center">
+                <p
+                    class="text-sky-300 font-semibold tracking-widest text-sm md:text-base"
+                >
+                    DESARROLLADO POR
+                    <span class="text-white font-bold">ROBERTO MORÁN</span>
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            const btn = document.getElementById("btn-menu-cel");
+            const menu = document.getElementById("menu-cel");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+    </body>
+</html>
