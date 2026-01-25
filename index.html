@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Seleccionar Guia</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <style>
+            .titulo-estrella::before {
+                content: "✨";
+                margin-right: 5px;
+            }
+            .titulo-estrella::after {
+                content: "✨";
+                margin-left: 5px;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-[#222] font-['Roboto',_sans-serif] text-white m-0 p-0 box-border"
+    >
+        <header
+            class="w-[90%] md:w-[85%] lg:w-[80%] mx-auto mt-5 flex flex-col items-center justify-between"
+        >
+            <div class="w-full text-center">
+                <h1
+                    class="text-5xl md:text-7xl font-black text-[#a5d8ff] pt-5 mb-2.5 leading-tight"
+                >
+                    Desarrollo Web II - Portafolio de Guías
+                </h1>
+                <h3
+                    class="text-[#a5d8ff] text-2xl md:text-3xl font-bold text-center mb-2.5"
+                >
+                    Roberto Morán - 20245258
+                </h3>
+            </div>
+        </header>
+
+        <main class="w-[90%] md:w-[85%] lg:w-[80%] mx-auto mt-12 mb-0">
+            <section class="mb-12">
+                <div class="flex items-center gap-[15px] mb-5">
+                    <h2
+                        class="text-[#a3a39f] text-[1.3rem] font-normal text-center titulo-estrella whitespace-nowrap"
+                    >
+                        Datos personales
+                    </h2>
+                    <div
+                        class="h-[7px] bg-[#a5d8ff] flex-grow rounded-[5px]"
+                    ></div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <article class="w-full md:w-1/3 flex justify-center">
+                        <img
+                            src="img/presentacion.png"
+                            alt="foto-bienvenida"
+                            class="max-w-[200px] md:max-w-full rounded-[10px] shadow-lg"
+                        />
+                    </article>
+                    <article class="w-full md:w-2/3 flex flex-col gap-6">
+                        <div class="border border-[#a5d8ff] rounded-[10px] p-5">
+                            <h4
+                                class="text-[#a5d8ff] text-[1.5rem] font-bold mb-3"
+                            >
+                                Información
+                            </h4>
+                            <ul class="list-none space-y-2">
+                                <li>
+                                    <span class="font-bold text-[#a5d8ff]"
+                                        >Nombre:</span
+                                    >
+                                    Roberto Morán
+                                </li>
+                                <li>
+                                    <span class="font-bold text-[#a5d8ff]"
+                                        >Carnet:</span
+                                    >
+                                    20245258
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4
+                                class="text-[#a5d8ff] text-[1.5rem] font-bold mb-3"
+                            >
+                                Sobre mí
+                            </h4>
+                            <p class="text-white text-justify">
+                                Mi nombre es Roberto Morán. Actualmente tengo 20
+                                años y estudio en la ESEN la carrera de
+                                Ingeniería de Software y Negocios Digitales
+                                (ISND). Soy una persona algo introvertida, pero
+                                disfruto pasar tiempo con mis amigos. Me gusta
+                                aprovechar mi tiempo jugando videojuegos, viendo
+                                series o videos de YouTube. Me gusta aprender
+                                constantemente y siento curiosidad por diversos
+                                temas. Pienso que nunca se llega a saber todo y
+                                trato de entender el porqué de las cosas.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"
+            >
+                <article
+                    class="border border-[#a5d8ff] rounded-[10px] p-5 flex flex-col justify-between h-full"
+                >
+                    <div>
+                        <h4
+                            class="text-[#a5d8ff] text-3xl font-bold text-center mb-3"
+                        >
+                            Guía 1
+                        </h4>
+                        <p class="text-gray-300 mb-4">
+                            Esta guía contiene varios ejercicios prácticos sobre
+                            Tailwind CSS. Adicionalmente, incluye un sitio sobre
+                            uno de mis videojuegos favoritos.
+                        </p>
+                    </div>
+                    <a
+                        href="Guia1_20245258/index_guia1.html"
+                        class="text-[#222] text-center :text-left font-bold bg-[#a5d8ff] lg:self-end px-4 py-2 rounded-full hover:bg-[#89c9ff] transition-colors duration-300"
+                    >
+                        Ver guía 1
+                    </a>
+                </article>
+            </div>
+        </main>
+
+        <footer class="text-center py-5 text-[#a3a39f]">
+            <p>&copy; 2025 Roberto Morán</p>
+        </footer>
+    </body>
+</html>
